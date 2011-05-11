@@ -1,0 +1,35 @@
+<h1>Rails Camp 9: Listing <%= Peep.count %> Peeps</h1>
+
+<p><%= Peep.form_returned.count %> forms returned so far.</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Twitter</th>
+    <th>Email</th>
+    <th>Form returned</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @peeps.each do |peep| %>
+  <tr>
+    <td><%= peep.full_name %></td>
+    <td>
+      <% unless peep.twitter.blank?%>
+        <a href="http://twitter.com/<%= peep.twitter %>">@<%= peep.twitter %></a>
+      <% end %>
+    </td>
+    <td><a href="mailto:<%= peep.email %>"><%= peep.email %></td>
+    <td><%= peep.form_returned? ? "yes" : "" %></td>
+    <td><%= link_to 'Show', peep %></td>
+    <td><%= link_to 'Edit', edit_peep_path(peep) %></td>
+    <td><%= link_to 'Destroy', peep, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Peep', new_peep_path %>
