@@ -87,8 +87,13 @@ class PeepsController < ApplicationController
     @peep = Peep.find_by_email(params[:email])
     
     respond_to do |format|
-      format.html { render :action => "show"}
-      format.xml { render :xml => @peep }
+      if @peep
+        format.html { render :action => "show"}
+        format.xml { render :xml => @peep }
+      else
+        format.html { render :text => "No peep found for #{params[:email]}." }
+        format.xml { render :xml => "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<error>No peep found for #{params[:email]}.</error>" }
+      end
     end
   end
 end
