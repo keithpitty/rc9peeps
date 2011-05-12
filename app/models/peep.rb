@@ -10,4 +10,9 @@ class Peep < ActiveRecord::Base
   def dietary_requirements?
     !dietary_requirements.blank?
   end
+  
+  def twitter?
+    !twitter.blank?
+  end
+  
 end

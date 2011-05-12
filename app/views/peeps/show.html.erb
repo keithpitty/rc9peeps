@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>Email: <%= @peep.email %></p>
-<% if @peep.twitter %>
+<% if @peep.twitter? %>
   <p>Twitter: @<%= @peep.twitter %></p>
 <% end %>
 <% if @peep.dietary_requirements? %>
