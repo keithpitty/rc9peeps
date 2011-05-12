@@ -80,4 +80,15 @@ class PeepsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  # GET /peeps/find_by_email?email=joe@example.com
+  # GET /peeps/find_by_email.xml?email=joe@example.com
+  def find_by_email
+    @peep = Peep.find_by_email(params[:email])
+    
+    respond_to do |format|
+      format.html { render :action => "show"}
+      format.xml { render :xml => @peep }
+    end
+  end
 end
