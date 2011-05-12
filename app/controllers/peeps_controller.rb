@@ -1,4 +1,6 @@
 class PeepsController < ApplicationController
+  before_filter :require_user
+  
   # GET /peeps
   # GET /peeps.xml
   def index

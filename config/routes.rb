@@ -4,5 +4,10 @@ Rc9::Application.routes.draw do
       get 'find_by_email'
     end
   end
-  root :to => "peeps#index"
+  resources :users
+  resource :account, :controller => "users"
+  resource :user_session
+  match 'login' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout
+  root :to => "user_sessions#new"
 end
