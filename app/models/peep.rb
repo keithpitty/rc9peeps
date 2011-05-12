@@ -6,4 +6,8 @@ class Peep < ActiveRecord::Base
   def full_name
     "#{first_name} #{last_name}"
   end
+  
+  def dietary_requirements?
+    !dietary_requirements.blank?
+  end
 end

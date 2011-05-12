@@ -1,5 +1,15 @@
+<h1><%= @peep.full_name %></h1>
 <p id="notice"><%= notice %></p>
 
-
+<p>Email: <%= @peep.email %></p>
+<% if @peep.twitter %>
+  <p>Twitter: @<%= @peep.twitter %></p>
+<% end %>
+<% if @peep.dietary_requirements? %>
+  <p>Dietary requirements: <%= @peep.dietary_requirements %></p>
+<% else %>
+  <p>No special dietary requirements.</p>
+<% end %>
+<p>Has <%= "not " unless @peep.form_returned %>returned form.</p>
 <%= link_to 'Edit', edit_peep_path(@peep) %> |
 <%= link_to 'Back', peeps_path %>
