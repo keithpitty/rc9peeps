@@ -4,6 +4,9 @@ class Peep < ActiveRecord::Base
   scope :form_outstanding, where(form_returned: false)
   scope :twitterless, where("twitter IS NULL OR twitter = ''")
   
+  include Gravtastic
+  gravtastic
+  
   def full_name
     "#{first_name} #{last_name}"
   end

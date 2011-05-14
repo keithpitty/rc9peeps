@@ -1,6 +1,7 @@
 <h1><%= @peep.full_name %></h1>
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @peep.gravatar_url %>
 <p><a href="mailto:<%= @peep.email %>"><%= @peep.email %></a></p>
 <% if @peep.twitter? %>
   <p><a href="http://twitter.com/<%= @peep.twitter %>">@<%= @peep.twitter %></a></p>
