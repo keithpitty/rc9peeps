@@ -1,0 +1,13 @@
+h2. Purpose
+
+p. rc9peeps is designed to help those preparing to run and participate in Rails Camp 9.
+
+h2. TO DO: 
+
+* facilitate printing of lanyard inserts
+
+h3. Potential Enhancements
+
+* allow peeps to register by entering their email address
+* add profile for each peep
+* allow peeps to update their profile
