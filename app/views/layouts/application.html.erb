@@ -16,7 +16,7 @@
 <body>
   <div class="container">
   	<div class="span-24">
-  	  <img src="/images/header.gif" alt="Railscamp 9" />
+  	  <%= link_to((image_tag "/images/header.gif"), peeps_url, class: "noicon" )  %>
   	</div>
   	<div class="span-4">
   	</div>
@@ -24,7 +24,7 @@
   		<%= yield %>
   	</div>
   	<div class="span-4 last">
-      <p><%= link_to "Log out", logout_url if @current_user %></p>
+      <p><%= link_to "Log out", logout_url, class: "noicon" if @current_user %></p>
   	</div>
 	
   	<div class="span-24">
