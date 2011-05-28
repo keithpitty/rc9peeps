@@ -22,6 +22,10 @@ class Peep < ActiveRecord::Base
     !twitter.blank?
   end
   
+  def ticket_type
+    vip? ? 'VIP' : 'Standard'
+  end
+  
   def self.emails_str(scope = :all)
     Peep.send(scope).map { |p| p.email }.join(', ')
   end

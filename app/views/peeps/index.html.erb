@@ -8,6 +8,7 @@
     <th>Twitter</th>
     <th>Email</th>
     <th>Form returned</th>
+    <th>Ticket type<th>
     <th></th>
     <th></th>
     <th></th>
@@ -23,6 +24,7 @@
     </td>
     <td><a href="mailto:<%= peep.email %>"><%= peep.email %></td>
     <td><%= peep.form_returned? ? "yes" : "" %></td>
+    <td><%= peep.ticket_type %></td>
     <td><%= link_to 'Show', peep %></td>
     <td><%= link_to 'Edit', edit_peep_path(peep) %></td>
     <td><%= link_to 'Destroy', peep, :confirm => 'Are you sure?', :method => :delete %></td>
