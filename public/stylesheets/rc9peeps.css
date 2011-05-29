@@ -1,13 +1,22 @@
 #nav ul {
-margin:0;
-padding:0 0 3em 0;
-list-style:none;
+  margin:0;
+  padding:0;
+  list-style:none;
 }
 #nav li {
-display:inline;
-margin:0;
-padding:0 1.5em 0 0;
-font-weight: bold;
-font-size: 1.5em;
+  display:inline;
+  margin:0;
+  padding:0 3em 0 0;
+  font-weight: bold;
+  font-size: 1.5em;
 }
-#nav a:link, #nav a:visited {text-decoration:none}
+#nav li a:link, #nav li a:visited {
+  text-decoration:none;
+  color:#06c;
+}
+#nav li a:focus, #nav li a:hover {
+  color:#09f;
+}
+#nav li a.selected {
+  color:#666;
+}

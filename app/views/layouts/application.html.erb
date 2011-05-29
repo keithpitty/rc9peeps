@@ -18,13 +18,7 @@
   <div class="container">
   	<div class="span-24">
   	  <%= link_to((image_tag "/images/header.gif"), peeps_url, class: "noicon" )  %>
-  	  <div id="nav">
-  	    <ul>
-  	      <li><%= link_to "List Peeps", peeps_url, class: "noicon" %></li>
-  	      <li><%= link_to "Print Stuff", print_url, class: "noicon" %></li>
-  	      <li><%= link_to "Profile", account_url, class: "noicon" %></li>
-  	    </ul>
-  	  </div>
+  	  <%= render_navigation %>
   	</div>
   	<div class="span-4">
   	</div>
