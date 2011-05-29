@@ -22,6 +22,10 @@ class Peep < ActiveRecord::Base
     !twitter.blank?
   end
   
+  def twitter_handle
+    twitter? ? "@#{twitter}" : ''
+  end
+  
   def ticket_type
     vip? ? 'VIP' : 'Standard'
   end
