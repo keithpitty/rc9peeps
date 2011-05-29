@@ -18,7 +18,7 @@
   <div class="container">
   	<div class="span-24">
   	  <%= link_to((image_tag "/images/header.gif"), peeps_url, class: "noicon" )  %>
-  	  <%= render_navigation %>
+  	  <%= render_navigation if @current_user %>
   	</div>
   	<div class="span-4">
   	</div>

@@ -6,7 +6,11 @@ Rc9::Application.routes.draw do
   end
   resources :users
   resource :account, :controller => "users"
-  resource :print, :controller => "print"
+  resource :print, :controller => "print" do
+    member do
+      get :attendees
+    end
+  end
   resource :user_session
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
