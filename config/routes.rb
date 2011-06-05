@@ -9,6 +9,7 @@ Rc9::Application.routes.draw do
   resource :print, :controller => "print" do
     member do
       get :attendees
+      get :lanyards
     end
   end
   resource :user_session
