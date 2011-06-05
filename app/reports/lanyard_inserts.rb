@@ -24,6 +24,7 @@ class LanyardInserts < Prawn::Document
     def page_one
       page_1 = grid(0, 1)
       bounding_box page_1.top_left, width: page_1.width, height: page_1.height do
+#        stroke_bounds
         font "Helvetica"
         font_size 60
         text " "
@@ -41,6 +42,7 @@ class LanyardInserts < Prawn::Document
     def page_two
       page_2 = grid(0, 0)
       bounding_box page_2.top_left, width: page_2.width, height: page_2.height do
+#        stroke_bounds
         font "Helvetica"
         font_size 32
         text "http://sup"
@@ -66,14 +68,16 @@ class LanyardInserts < Prawn::Document
     def page_three
       page_3 = grid(0, 1)
       bounding_box page_3.top_left, width: page_3.width, height: page_3.height do
+#        stroke_bounds
       end
     end
     
     def page_four
       page_4 = grid(0, 0)
       bounding_box page_4.top_left, width: page_4.width, height: page_4.height do
-        map = "#{Rails.root}/public/images/map.jpg"
-        image map, at: [0, 0], width: 361, height: 500
+#        stroke_bounds
+        map = "#{Rails.root}/public/images/map.png"
+        image map, at: [0, 347.53], width: 261.64, height: 347.53
       end
     end
   
