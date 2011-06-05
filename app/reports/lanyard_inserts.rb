@@ -29,13 +29,13 @@ class LanyardInserts < Prawn::Document
         font_size 60
         text " "
         font_size 50
-        text @peep.first_name
+        text @peep.first_name, align: :center
         font_size 14
-        text @peep.last_name
+        text @peep.last_name, align: :center
         font_size 36
         text " "
         font_size 24
-        text @peep.twitter_handle
+        text @peep.twitter_handle, align: :center
       end
     end
     
