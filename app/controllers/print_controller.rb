@@ -13,4 +13,12 @@ class PrintController < ApplicationController
     end
   end
   
+  def lanyards
+    respond_to do |format|
+      format.pdf do
+        send_data LanyardInserts.new.to_pdf, filename: 'lanyards.pdf', type: 'application/pdf'
+      end
+    end
+  end
+  
 end
