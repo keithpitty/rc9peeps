@@ -1,12 +1,17 @@
 class AttendeeList < Prawn::Document
   
+  def initialize(options = {}, &block)
+    super page_size: 'A4'
+  end
+  
   def to_pdf
-    data = [['Name', 'Ticket Type', 'Twitter', 'Checked In?']]
+    data = [['Name', 'Ticket Type', 'Twitter', 'Sleeping Location', 'Checked In?']]
     Peep.all.each do |peep|
       peep_data = []
       peep_data << peep.full_name
       peep_data << peep.ticket_type
       peep_data << peep.twitter_handle
+      peep_data << ''
       peep_data << ''
       data << peep_data
     end
