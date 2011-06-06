@@ -1,7 +1,7 @@
 class LanyardInserts < Prawn::Document
 
   def initialize(options = {}, &block)
-    super page_size: 'A5', page_layout: :landscape, :margin => 10
+    super page_size: 'A5', page_layout: :landscape, margin: 10
   end  
 
   def to_pdf
@@ -25,20 +25,20 @@ class LanyardInserts < Prawn::Document
       page_1 = grid(0, 1)
       bounding_box page_1.top_left, width: page_1.width, height: page_1.height do
  #       stroke_bounds
-        font "#{RAILS_ROOT}/public/images/KOMIKAX_.ttf"
+        font "#{Rails.root}/public/images/KOMIKAX_.ttf"
         font_size 60
         text " "
         font_size 44
  #       fill_color "%06x" % (rand * 0xffffff)
-        text @peep.first_name, :indent_paragraphs => 10
+        text @peep.first_name, indent_paragraphs: 10
         font_size 16
-        text @peep.last_name, :indent_paragraphs => 10
+        text @peep.last_name, indent_paragraphs: 10
  #       fill_color "#000000"
         font_size 90
         text " "
         font_size 24
         unless @peep.twitter_handle.empty?
-          text @peep.twitter_handle, :indent_paragraphs => 10
+          text @peep.twitter_handle, indent_paragraphs: 10
         end
         logo = "#{Rails.root}/public/images/logo.png"
         image logo, at: [120, 115], width: 150 
