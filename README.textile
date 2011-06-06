@@ -4,10 +4,4 @@ p. rc9peeps is designed to help those preparing to run and participate in Rails 
 
 h2. TO DO: 
 
-* facilitate printing of lanyard inserts
-
-h3. Potential Enhancements
-
-* allow peeps to register by entering their email address
-* add profile for each peep
-* allow peeps to update their profile
+* add final polish to lanyards
