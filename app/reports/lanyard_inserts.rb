@@ -7,6 +7,20 @@ class LanyardInserts < Prawn::Document
   def to_pdf
     Peep.all.each_with_index do |peep, index|
       @peep = peep
+      print_pages
+      start_new_page
+    end
+    # Print 20 extras with blank names
+    (1..20).each_with_index do |peep, index|
+      @peep = Peep.new(first_name: '', last_name: '', twitter: '')
+      print_pages
+      start_new_page unless index == 19
+    end
+    render
+  end
+  
+  private
+    def print_pages
       # Print on 2 pages double-sided for folding
       define_grid(columns: 2, rows: 1, column_gutter: 20)
       page_four
@@ -15,12 +29,8 @@ class LanyardInserts < Prawn::Document
       define_grid(columns: 2, rows: 1, column_gutter: 20)
       page_two
       page_three
-      start_new_page unless index == Peep.count - 1
     end
-    render
-  end
-  
-  private
+    
     def page_one
       page_1 = grid(0, 1)
       bounding_box page_1.top_left, width: page_1.width, height: page_1.height do
