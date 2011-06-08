@@ -50,10 +50,10 @@ class LanyardInserts < Prawn::Document
       page_2 = grid(0, 0)
       bounding_box page_2.top_left, width: page_2.width, height: page_2.height do
  #       stroke_bounds
-        font "#{RAILS_ROOT}/public/images/KOMIKAX_.ttf"
+        font "#{Rails.root}/public/images/KOMIKAX_.ttf"
         font_size 24
         text "Map Legend"
-        font "#{RAILS_ROOT}/public/images/DroidSansMono.ttf"
+        font "#{Rails.root}/public/images/DroidSansMono.ttf"
         font_size 10
         text " "
         text "A: Conference room south (has projector)"
@@ -73,12 +73,12 @@ class LanyardInserts < Prawn::Document
         text " "
         text " "
 
-        font "#{RAILS_ROOT}/public/images/KOMIKAX_.ttf"
+        font "#{Rails.root}/public/images/KOMIKAX_.ttf"
         font_size 24
         text "At camp"
         font_size 10
         text " "
-        font "#{RAILS_ROOT}/public/images/DroidSansMono.ttf"
+        font "#{Rails.root}/public/images/DroidSansMono.ttf"
         text " "
         text "Introduce yourself to two people you don't know"
         text " "
@@ -96,10 +96,10 @@ class LanyardInserts < Prawn::Document
       page_3 = grid(0, 1)
       bounding_box page_3.top_left, width: page_3.width, height: page_3.height do
 #        stroke_bounds
-        font "#{RAILS_ROOT}/public/images/KOMIKAX_.ttf"
+        font "#{Rails.root}/public/images/KOMIKAX_.ttf"
         font_size 24
         text "Meal Times"
-        font "#{RAILS_ROOT}/public/images/DroidSansMono.ttf"
+        font "#{Rails.root}/public/images/DroidSansMono.ttf"
         font_size 16
         text " "
         text "Breakfast:  7:30 - 8:00 am"
@@ -109,9 +109,9 @@ class LanyardInserts < Prawn::Document
         text " "
         text " "
         font_size 24
-        font "#{RAILS_ROOT}/public/images/KOMIKAX_.ttf"
+        font "#{Rails.root}/public/images/KOMIKAX_.ttf"
         text "Organising group contacts"
-        font "#{RAILS_ROOT}/public/images/DroidSansMono.ttf"
+        font "#{Rails.root}/public/images/DroidSansMono.ttf"
         font_size 16
         text " "
         text "Jason Crane: #{CONFIG['snapperwolf_mobile']}"
