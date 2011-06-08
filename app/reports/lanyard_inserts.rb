@@ -50,10 +50,10 @@ class LanyardInserts < Prawn::Document
       page_2 = grid(0, 0)
       bounding_box page_2.top_left, width: page_2.width, height: page_2.height do
  #       stroke_bounds
-        font "#{RAILS_ROOT}/public/images/KOMIKAX_.ttf"
+        font "#{Rails.root}/public/images/KOMIKAX_.ttf"
         font_size 24
         text "Map Legend"
-        font "#{RAILS_ROOT}/public/images/DroidSansMono.ttf"
+        font "#{Rails.root}/public/images/DroidSansMono.ttf"
         font_size 10
         text " "
         text "A: Conference room south (has projector)"
@@ -73,31 +73,22 @@ class LanyardInserts < Prawn::Document
         text " "
         text " "
 
-        font "#{RAILS_ROOT}/public/images/KOMIKAX_.ttf"
+        font "#{Rails.root}/public/images/KOMIKAX_.ttf"
         font_size 24
-        text "At a glance"
-        font_size 10 
+        text "At camp"
+        font_size 10
         text " "
-        
-        font "#{RAILS_ROOT}/public/images/DroidSansMono.ttf"
-        font_size 14
-        text "Meal Times:"
-        font_size 12
+        font "#{Rails.root}/public/images/DroidSansMono.ttf"
         text " "
-        text "Breakfast:  7:30 - 8:00 am"
-        text "Lunch:     12:00 - 1:00 pm"
-        text "Dinner:     6:30 - 7:30 pm"
+        text "Introduce yourself to two people you don't know"
         text " "
-        font_size 14
-        text "Organising group contacts:"
-        font_size 12
+        text "Thank at least one person who's helped you with projects you've worked on in the past (or is helping you at camp)"
         text " "
-        text "Jason Crane: #{CONFIG['snapperwolf_mobile']}"
-        text "Keith Pitty: #{CONFIG['beardedkeith_mobile']}"
-        font_size 9
+        text "Railscamp is what you make of it, so get involved!"
         text " "
         text " "
-        text "Bus for Gold Coast leaves Monday 10am sharp!"
+        text " "
+        text "Code, Share, Respect"
       end
     end
     
@@ -105,12 +96,36 @@ class LanyardInserts < Prawn::Document
       page_3 = grid(0, 1)
       bounding_box page_3.top_left, width: page_3.width, height: page_3.height do
 #        stroke_bounds
-        font "#{RAILS_ROOT}/public/images/KOMIKAX_.ttf"
+        font "#{Rails.root}/public/images/KOMIKAX_.ttf"
         font_size 24
-        text "Notes"
-        line_count = 10
-        line_step = ((page_3.height-50)/line_count).to_i
-        (0..page_3.height-50.to_i).step(line_step) {|i| line [0,i],[page_3.width,i];stroke}
+        text "Meal Times"
+        font "#{Rails.root}/public/images/DroidSansMono.ttf"
+        font_size 16
+        text " "
+        text "Breakfast:  7:30 - 8:00 am"
+        text "Lunch:     12:00 - 1:00 pm"
+        text "Dinner:     6:30 - 7:30 pm"
+        text " "
+        text " "
+        text " "
+        font_size 24
+        font "#{Rails.root}/public/images/KOMIKAX_.ttf"
+        text "Organising group contacts"
+        font "#{Rails.root}/public/images/DroidSansMono.ttf"
+        font_size 16
+        text " "
+        text "Jason Crane: #{CONFIG['snapperwolf_mobile']}"
+        text "Keith Pitty: #{CONFIG['beardedkeith_mobile']}"
+        text " "
+        text " "
+        text " "
+        text " "
+        text " "
+        text " "
+        text " "
+        text " "
+        font_size 9
+        text "Bus for Gold Coast leaves Monday 10am sharp!"
       end
     end
     
