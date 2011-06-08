@@ -1,7 +1,3 @@
 h2. Purpose
 
 p. rc9peeps is designed to help those preparing to run and participate in Rails Camp 9.
-
-h2. TO DO: 
-
-* add final polish to lanyards
